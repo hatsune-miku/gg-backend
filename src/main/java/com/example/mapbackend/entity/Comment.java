@@ -30,6 +30,10 @@ public class Comment {
     @Column(name = "content")
     private String content;
 
+    @Basic
+    @Column(name = "rate")
+    private int rate;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", referencedColumnName = "id", insertable = false, updatable = false)
     @JsonIgnore

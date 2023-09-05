@@ -52,6 +52,7 @@ public class CommentController {
                 .siteIdentifier(comment.getSiteIdentifier())
                 .username(comment.getUser().getUsername())
                 .imageUrls(comment.getMediaList().stream().map(CommentMedia::getMediaUrl).toList())
+                .rating(comment.getRate())
                 .build()
             ).toList();
 
@@ -159,6 +160,7 @@ public class CommentController {
             .userId(user.getId())
             .siteIdentifier(request.getSiteIdentifier())
             .mediaList(new ArrayList<>())
+            .rate(request.getRating())
             .build();
 
         try {

@@ -50,6 +50,7 @@ public class Packets {
     public static class PostCommentPacket {
         String siteIdentifier;
         String comment;
+        int rating;
     }
 
     @Builder
@@ -93,6 +94,7 @@ public class Packets {
         String siteIdentifier;
         String comment;
         String username;
+        int rating;
         List<String> imageUrls;
     }
 }
